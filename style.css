@@ -9,14 +9,16 @@ body {
     min-height: 100vh;
 }
 
-.panels > div {
+.panel {
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-size: cover;
-    flex: 1;
+    background-position: center;
+    flex: 1 0 auto;
+    margin: 0;
 }
 
 .panel1 {
@@ -33,4 +35,13 @@ body {
 }
 .panel5 {
     background-image: url(./images/5.jpg);
+}
+
+.panel.open {
+    font-size: 40px;
+    flex: 5;
+}
+
+.panel p:nth-child(2) {
+    font-size: 400%;
 }
