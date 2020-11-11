@@ -23,6 +23,8 @@ body {
     background-position: center;
     flex: 1 0 auto;
     margin: 0;
+    transition: font-size 0.7s, flex 0.7s;
+    overflow: hidden;
 }
 
 .panel1 {
@@ -57,4 +59,10 @@ p {
     font-weight: 400;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
     font-size: 200%;
+    transition: transform 0.5s;
 }
+
+.panel p:first-child { transform: translateY(-100%); }
+.panel p:last-child { transform: translateY(100%); }
+.panel.open p:first-child { transform: translateY(0); }
+.panel.open p:last-child { transform: translateY(0); }
